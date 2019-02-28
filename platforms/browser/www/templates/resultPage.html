@@ -1,0 +1,53 @@
+<ion-view title="Result Page" id="result" style="background-color:#265968;">
+  <ion-content padding="true" class="has-header">
+      <a ui-sref="cameraPage()" id="home-camera" class="button button-large button-block button-calm icon-left ion-android-camera">Scanner un nouveau CB</a>
+        <a ui-sref="listPage()" class="button button-block button-balanced" ng-click="save()">Sauvegarder ce CB</a>
+          <div class="list card item-text-wrap">
+              <ion-item class="item-icon-left dark">
+                <i class="icon"><img src="img/book_b.gif" /></i>{{title}}
+                <p>ppn : {{ppn}}</p>
+                <p>Aleph num : {{docNumber}}</p>
+              </ion-item>
+              <div class="item item-divider">
+                  Ce CB : {{cb}}
+                </div>
+              <ion-item class="item-icon-left assertive">
+                <i class="icon ion-ios-download"></i>Prets
+                <span class="badge royal-bg">{{loans}}</span>
+              </ion-item>
+              <ion-item class="item-icon-left assertive">
+                <i class="icon ion-android-locate"></i>Dernier retour
+                <span class="badge royal-bg">{{lastReturn}}</span>
+              </ion-item>
+              <ion-item class="item-icon-left assertive">
+                <i class="icon ion-android-calendar"></i>Date entrée
+                <span class="badge royal-bg">{{entryDate}}</span>
+              </ion-item>
+            </div>
+            <div class="list card">
+                <div ng-repeat="ex in exs">
+                    <div class="item item-divider">
+                        Autre exemplaire dans Aleph : CB {{ex.barcode}}
+                      </div>
+              <ion-item class="item-icon-left item-text-wrap">
+                <i class="icon"><img src="img/book_b.gif" /></i>
+ 
+                <p><strong>Bibliothèque</strong> : {{ex.bib}}</p>
+                <p><strong>Localisation</strong> : {{ex.loc}}</p>
+                <p><strong>Cote</strong> : {{ex.cote}}</p>
+                <p><strong>Prets</strong> : {{ex.prets}}</p>
+                <p><strong>Dernier retour</strong> : {{ex.retour}}</p>
+                <p><strong>Statut</strong> : {{ex.statut}}</p>
+              </ion-item>
+              </div>
+            </div>
+            <div class="list card">
+              <ion-item class="item-icon-left positive">
+                <i class="icon"><img src="img/map_b.gif" /></i>Localisations Sudoc
+                <span class="badge energized-bg">{{countSudoc}}</span>
+              </ion-item>
+              <ion-item class="item-icon-left dark" ng-repeat="librarie in libraries" style="font-size:80%;">
+                <i class="icon ion-android-map"></i> {{librarie.shortname}}</ion-item>
+            </div>
+  </ion-content>
+</ion-view>

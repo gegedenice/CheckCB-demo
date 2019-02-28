@@ -1,0 +1,27 @@
+<ion-view title="ListTab Default Page" id="list" style="background-color:#265968;" ng-init="get()">
+  <ion-content padding="true" class="has-header">
+      <a ui-sref="cameraPage()" class="button button-large button-block button-calm icon-left ion-android-camera">Scanner un nouveau CB</a>
+      <div ng-if="localStorageResults.length != '0'">
+          <div class="button-bar">
+              <a class="button button-block button-balanced" ng-click="">Exporter (à venir)</a>
+              <a class="button button-block button-assertive" ng-click="openModal()">Tout supprimer</a>
+           </div>
+      <ion-list>
+            <div ng-repeat="localStorageResult in localStorageResults">
+            <ion-item class="item-icon-right item-text-wrap positive">
+                    <i class="icon ion-ios-close" ng-click="delete(localStorageResult.counter)"></i>
+              {{localStorageResult.title}}
+              <p>CB {{localStorageResult.cb}}</p>
+              <p>Cote {{localStorageResult.cote}}</p>
+              <p >Prêts : {{localStorageResult.prets}}</p>
+              <p>Autres exemplaires Aleph : {{localStorageResult.nbExsAleph}}</p>
+              <p>Localisations Sudoc : {{localStorageResult.nbExsSudoc}}</p>
+            </ion-item>
+            </div>
+          </ion-list>
+          </div>
+          <div ng-if="localStorageResults.length == '0'">
+                <a class="button button-block button-balanced">Aucune donnée enregistrée</a>
+          </div>
+  </ion-content>
+</ion-view>

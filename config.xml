@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="fr.unice.checkcb" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>CheckCB</name>
+    <description>
+       Pour les utilisateurs du SIGB Aleph : scanner le code-barre d'un document et obtenir toutes les infos de gestion sur l'exemplaire.
+    </description>
+    <author email="geoffroy@unice.fr" href="https://gegedenice.github.io/">
+        Géraldine Geoffroy
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+     <platform name="android">
+        <icon height="400" platform="android" src="icon-codebar.png" width="400" />
+    </platform>
+    <engine name="browser" spec="~5.0.4" />
+    <engine name="android" spec="~7.1.4" />
+    <preference name="android-targetSdkVersion" value="22" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="com.phonegap.plugins.barcodescanner" spec="https://github.com/jrontend/phonegap-plugin-barcodescanner" />
+</widget>
