@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="fr.unice.checkcb" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="fr.unice.checkcb" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>CheckCB</name>
     <description>
        Pour les utilisateurs du SIGB Aleph : scanner le code-barre d'un document et obtenir toutes les infos de gestion sur l'exemplaire.
