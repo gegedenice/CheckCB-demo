@@ -7,13 +7,23 @@ module.exports = [
     "clobbers": [
       "plugins.barcodeScanner"
     ]
+  },
+  {
+    "id": "cordova-plugin-email.EmailComposer",
+    "file": "plugins/cordova-plugin-email/www/email_composer.js",
+    "pluginId": "cordova-plugin-email",
+    "clobbers": [
+      "cordova.plugins.email",
+      "plugin.email"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-whitelist": "1.3.3",
-  "com.phonegap.plugins.barcodescanner": "0.6.1"
+  "com.phonegap.plugins.barcodescanner": "0.6.1",
+  "cordova-plugin-email": "1.2.7",
+  "cordova-plugin-whitelist": "1.3.3"
 };
 // BOTTOM OF METADATA
 });

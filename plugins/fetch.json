@@ -14,5 +14,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-email": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-email@^1.2.7"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

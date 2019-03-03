@@ -90,8 +90,8 @@ $scope.save = function(){
 	});
 }])
    
-.controller('listPageCtrl', ['$scope', '$stateParams', '$ionicModal',
-function ($scope, $stateParams, $ionicModal) {
+.controller('listPageCtrl', ['$scope', '$stateParams', '$ionicModal', 'emailComposer', '$sce',
+function ($scope, $stateParams, $ionicModal, emailComposer, $sce) {
  $scope.get = function(){
   $scope.localStorageResults = []
   var keys = Object.keys(localStorage)
@@ -102,6 +102,13 @@ function ($scope, $stateParams, $ionicModal) {
   }
   return $scope.localStorageResults
 }
+$scope.mail = function(){
+  var body = $scope.localStorageResults.map(function(item) {
+    return $sce.trustAsHtml("CB : "+item.cb+"; Titre : "+item.title+"; prêts : "+item.prets)
+  })
+  console.log(body)
+  emailComposer.mail(body.join("  ----  "))
+};
 $scope.delete = function(id){
   localStorage.removeItem(id)
 }

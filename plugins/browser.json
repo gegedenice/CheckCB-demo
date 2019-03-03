@@ -7,10 +7,13 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
+    "com.phonegap.plugins.barcodescanner": {
       "PACKAGE_NAME": "fr.unice.checkcb"
     },
-    "com.phonegap.plugins.barcodescanner": {
+    "cordova-plugin-email": {
+      "PACKAGE_NAME": "fr.unice.checkcb"
+    },
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "fr.unice.checkcb"
     }
   },

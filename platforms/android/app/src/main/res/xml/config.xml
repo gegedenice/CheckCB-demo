@@ -1,15 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="fr.unice.checkcb" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
+    <feature name="EmailComposer">
+        <param name="android-package" value="de.martinreinhardt.cordova.plugins.email.EmailComposer" />
+    </feature>
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="BarcodeScanner">
-        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
-    </feature>
     <name>CheckCB</name>
     <description>
-       Pour les utilisateurs du SIGB Aleph : scanner le code-barre d'un document et obtenir toutes les infos de gestion sur l'exemplaire
+       Pour les utilisateurs du SIGB Aleph : scanner le code-barre d'un document et obtenir toutes les infos de gestion sur l'exemplaire.
     </description>
     <author email="geoffroy@unice.fr" href="https://gegedenice.github.io/">
         Géraldine Geoffroy

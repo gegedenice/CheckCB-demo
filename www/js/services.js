@@ -1,5 +1,24 @@
 angular.module('app.services', [])
+.factory('emailComposer', function ($rootScope) {
+  return {
+    mailAvailable: function(){
+      cordova.plugins.email.isAvailable().then(function() {
+        // is available
+      }, function () {
+        // not available
+        alert('Service non disponible : vous devez avoir un client de messagerie installé sur le téléphone.');
+      })
+    },
 
+    mail: function(body){
+      cordova.plugins.email.open({ 
+        subject: 'Envoyé de CheckCB',
+        body:    body,
+        isHtml:  true
+    });
+    }
+  }
+})
 .factory('barcodeScanner', function ($rootScope) {
     return {
       scan: function (onSuccess, onError, options) {

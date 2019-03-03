@@ -3,7 +3,7 @@
       <a ui-sref="cameraPage()" class="button button-large button-block button-calm icon-left ion-android-camera">Scanner un nouveau CB</a>
       <div ng-if="localStorageResults.length != '0'">
           <div class="button-bar">
-              <a class="button button-block button-balanced" ng-click="">Exporter (à venir)</a>
+              <a class="button button-block button-balanced" ng-click="mail()">Partager (mail/sms)</a>
               <a class="button button-block button-assertive" ng-click="openModal()">Tout supprimer</a>
            </div>
       <ion-list>
