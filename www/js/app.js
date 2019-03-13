@@ -1,10 +1,3 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives','app.services',])
 
 .config(function($ionicConfigProvider, $sceDelegateProvider){
@@ -84,7 +77,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
     }
   };
 })
-.constant('alephCbUrl', 'http://catalogue.unice.fr/primo_library/libweb/custom/getapialephcbparamtoitem?cb=')
-.constant('alephItemsUrl', 'http://catalogue.unice.fr/primo_library/libweb/custom/getapialephsysnumparamtoitems?sys_num=')
-.constant('alephMarcoaiUrl', 'http://catalogue.unice.fr/primo_library/libweb/custom/getapialephdocnumparamtomarcoai?doc_num=')
+.constant('alephCbUrl', '<votre_api_url>?cb=')
+.constant('alephItemsUrl', '<votre_api_url>?sys_num=')
+.constant('alephMarcoaiUrl', '<votre_api_url>?doc_num=')
 .constant('sudocMultiwhereUrl', 'https://www.sudoc.fr/services/multiwhere/');
