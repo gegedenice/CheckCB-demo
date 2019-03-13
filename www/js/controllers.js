@@ -2,12 +2,6 @@ angular.module('app.controllers', [])
   
 .controller('cameraPageCtrl', ['$scope', '$http','$window', '$stateParams', '$rootScope','barcodeScanner',
 function ($scope, $http, $window, $stateParams, $rootScope, barcodeScanner) {
- /*$scope.scan = function(){
-  barcodeScanner.scan(function (result) { 
-    $scope.value = result.text;
-    $window.location.href = '#/result/'+$scope.value;
-          });
-        }    */
         $scope.$on('$stateChangeSuccess', function (event, fromState) {
           if (fromState.name === "cameraPage") {
           barcodeScanner.scan(function (result) { 
